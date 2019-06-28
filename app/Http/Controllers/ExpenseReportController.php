@@ -90,7 +90,7 @@ class ExpenseReportController extends Controller
         ]);
 
         $report = ExpenseReport::findOrFail($id);
-        $report->title = $$validData['title'];
+        $report->title = $validData['title'];
         $report->save();
 
         return redirect('/expense_report');

@@ -18,22 +18,22 @@
 
     <div class="row">
         <div class="col">
-            <p>Details..</p>
-            <table class="table">
-                @foreach($report->expenses as $expense)
+              <h3>Detail</h3>
+              <table class="table">
+                  @foreach( $report->expenses as $expense)
                     <tr>
                         <td>{{ $expense->description }}</td>
-                        <td>{{ $expense->amout }}</td>
+                        <td>{{ $expense->amount }}</td>
                         <td>{{ $expense->created_at }}</td>
                     </tr>
-                @endforeach
-            </table>    
+                  @endforeach
+              </table>
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            <a class="btn btn" href="/expense_reports/{{ $report->id}}/expenses/create">New Space</a>
+            <a class="btn btn-primary" href="/expense_report/{{ $report->id }}/expenses/create">New Space</a>
         </div>
     </div>
 @endsection
