@@ -34,6 +34,7 @@
     <div class="row">
         <div class="col">
             <a class="btn btn-primary" href="/expense_report/{{ $report->id }}/expenses/create">New Space</a>
+            <a class="btn btn-success" href="/expense_report/{{ $report->id }}/confirmSendMail">Send Mail</a>
         </div>
     </div>
 @endsection

@@ -115,4 +115,14 @@ class ExpenseReportController extends Controller
         $report = ExpenseReport::findOrFail($id);
         return view('expenseReport.confirmDelete',compact('report'));
     }
+
+    public function confirmSendMail($id) {
+        $report = ExpenseReport::findOrFail($id);
+        return view('expenseReport.confirmSendMail',compact('report'));
+    }
+
+    public function sendMail(Request $request, $id){
+        $report = ExpenseReport::findOrFail($id);
+    }
+
 }

@@ -21,3 +21,6 @@ Route::resource('/expense_report','ExpenseReportController');
 Route::get('/expense_report/{id}/confirmDelete','ExpenseReportController@confirmDelete');
 Route::get('/expense_report/{expense_report}/expenses/create','ExpenseController@create');
 Route::post('/expense_report/{expense_report}/expenses/store','ExpenseController@store');
+
+Route::get('/expense_report/{expense_report}/confirmSendMail','ExpenseReportController@confirmSendMail');
+Route::post('/expense_report/{id}/sendMail','ExpenseReportController@sendMail');
